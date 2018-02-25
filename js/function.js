@@ -36,7 +36,7 @@ $(document).ready(function() {
 	// First screen full height
 	function setHeiHeight() {
 	    $('.full__height').css({
-	        minHeight: $(window).height() + 'px'
+	        height: $(window).height() + 'px'
 	    });
 	}
 	setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
@@ -58,17 +58,17 @@ $(document).ready(function() {
 	// });
 
 	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-    // $(document).ready(function(){
-    //     var HeaderTop = $('#header').offset().top;
+    $(document).ready(function(){
+        var HeaderTop = $('.header').offset().top;
         
-    //     $(window).scroll(function(){
-    //             if( $(window).scrollTop() > HeaderTop ) {
-    //                     $('#header').addClass('stiky');
-    //             } else {
-    //                     $('#header').removeClass('stiky');
-    //             }
-    //     });
-    // });
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > HeaderTop ) {
+                        $('.header').addClass('stiky');
+                } else {
+                        $('.header').removeClass('stiky');
+                }
+        });
+    });
    	// setGridMatch($('[data-grid-match] .grid__item'));
    	gridMatch();
 });

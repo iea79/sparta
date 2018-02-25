@@ -8,11 +8,7 @@
 
 @import 'mixins/mixin';
 // Fonts
-// @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,900);
-// @import url(https://fonts.googleapis.com/css?family=Lora);
-@include font-face("Century Gothic", fonts/CenturyGothic, normal, normal);
-@include font-face("Century Gothic Bold", fonts/CenturyGothic, bold, normal);
-@include font-face("ArialMT", fonts/CenturyGothic, normal, normal);
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900&subset=cyrillic');
 
 
  // Import files
@@ -88,80 +84,35 @@
 	float: right;
 }
 
-// Breadcrumb ==================================================================
-.breadcrumb {
-	margin: 15px 0;
-	padding: 0;
-	li {
-		display: inline-block;
-		vertical-align: baseline;
-		&:not(:first-child) {
-			&:before {
-				content: '/';
-				display: inline-block;
-			}
-		}
-		&:last-child {
-			a {
-				cursor: default;
-				text-decoration: none;
-			}
-		}
-		
-		a {
-			font-size: 12px;
-		}
-	}
-}
-
-// Pagination ==================================================================
-.pagination {
-	margin: 25px 0;
-	padding: 0;
-	li {
-		display: inline-block;
-		a {
-			display: block;
-			text-align: center;
-		}
-		&.prev, &.next {
-			a {
-				&:before {					
-				}
-			}
-		}
-		&.prev {
-			a {
-				&:before {
-					content: '<';
-					
-				}
-			}
-		}
-		&.next {
-			a {
-				&:before {
-					content: '>';
-					
-				}
-			}
-		}
-	}
-}
-
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	background-color: #ccc;
-	padding: 10px 0;
+	padding: 22px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	@extend %clear_a;
+	&__logo {
+		float: left;
+		width: 247px;
+	}
+	&__action {
+		overflow: hidden;
+		text-align: right;
+		padding-top: 25px;
+		a {
+			vertical-align: middle;
+			margin-left: 36px;
+			color: #fff;
+		}
+		.btn {
+			padding: 10px 17px 12px;
+			letter-spacing: 0.03em;
+		}
+	}
 }
 
-.logo {
-	background-color: #ddd;
-	float: left;
-	width: 150px;
-}
 
 // stiky menu
 .stiky {
@@ -191,17 +142,91 @@
 	@extend %clear_a;
 }
 
+.first__screen {
+	display: table;
+	width: 100%;
+	background: url('../img/bg.jpg') no-repeat center center;
+	background-size: cover;
+	color: #fff;
+	&_vertical {
+		display: table-cell;
+		vertical-align: middle;
+		padding-top: 140px;
+		padding-bottom: 117px;
+	}
+	&_date {
+		float: right;
+		text-align: right;
+		margin-top: 58px;
+		font-weight: 500;
+		width: 30px;
+		&-item {
+			border-top: 1px solid transparentize(#fff, .6);
+			padding: 24px 5px;
+			font-size: 14px;
+			text-transform: uppercase;
+			&:last-child {
+				border-bottom: 1px solid transparentize(#fff, .6);
+			}
+		}
+	}
+	&_hours {
+		font-weight: 800;
+		margin-bottom: 31px;
+		white-space: nowrap;
+	}
+	&_pretitle {
+		letter-spacing: 14.4px;
+		overflow: hidden;
+		// margin-bottom: 40px;
+	}
+	&_title {
+		overflow: hidden;
+		font-weight: 800;
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 48px;
+		letter-spacing: 2.4px;
+		margin: 0 0 87px;
+		&-lg {
+			font-weight: 900;
+			display: block;
+			margin-left: -10px;
+			margin-bottom: -5px;
+			font-size: 180px;
+			color: #ff0000;
+			letter-spacing: 9px;
+		}
+	}
+	&_action {
+		overflow: hidden;
+		&_sub {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 62px;
+			line-height: 1.5;
+		}
+	}
+	.btn {}
+}
+.btn__danger {}
+
 
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {
 	position: relative;
 	height: $footer_height;
-	background: #BFF08E;
+	background-color: #000000;
+	color: #666666;
+	font-size: 13px;
 	@extend %clear_all;
 	.container_center {
-		padding-top: 10px;
+		padding-top: 35px;
 		padding-bottom: 10px;
+	}
+	a {
+		color: #666666;
 	}
 }
 
