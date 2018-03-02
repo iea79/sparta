@@ -10,26 +10,27 @@ input[type=number],
 input[type=datetime], 
 textarea {
 	background-color: $input_bg_color;
-	border: 1px solid $input_border_color;
-	padding: 6px 15px;
+	border: none;
+	border-bottom: 1px solid $input_border_color;
+	padding: 18px 0;
 	outline: none;
 	font-size: 16px;
 	font-weight: 300;
 	font-family: $main_font_family;
-	border-radius: 5px;
+	border-radius: 0;
+	color: $input_color;
 	@include trs(0.3s);
 	&:hover {
+		border-bottom: 1px solid $input_hover_border_color;
+		background-color: $input_hover_bg_color;;
 	}
 	&:focus {
-		border: 1px solid #bebebe;
-		background-color: #f6f6f6;
-		@include placeholder {
-			color: red;
-		}
+		border-bottom: 1px solid $input_focus_border_color;
+		background-color: $input_focus_bg_color;;
 	}
 	&.input_error {
 		background-color: #fff0f0;
-		border: 1px solid red;
+		border-bottom: 1px solid red;
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
@@ -61,9 +62,9 @@ input[type=radio]:not(:disabled) {
 input[type=checkbox],
 input[type=radio] {
     display: inline-block;
-    height: 14px;
-    width: 14px;
-    border: 1px solid #aaa;
+    height: 24px;
+    width: 24px;
+    border: 1px solid #fff;
     overflow: hidden;
     margin-top: -4px;
     vertical-align: middle;
@@ -72,6 +73,7 @@ input[type=radio] {
     background: 0 0;
     text-align: center;
     position: relative;
+    margin-right: 20px;
 }
 
 input[type=radio] {
@@ -83,10 +85,14 @@ input[type=radio]:before {
     display: block;
 }
 
+input[type=checkbox]:before {
+	margin-top: 6px;
+}
+
 input[type=radio]:checked:before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     top: 50%;
     left: 50%;
     margin-top: -3px;
@@ -97,18 +103,23 @@ input[type=radio]:checked:before {
     background: #000;
 }
 
+input[type=checkbox]:checked {
+    border: 1px solid #ff0000;
+    background-color: #ff0000;
+}
+
 input[type=checkbox]:checked:before,
 input[type=checkbox]:indeterminate:before {
-    content: "\2714";
+    content: url(../img/check.svg);
     font-size: 12px;
     -webkit-font-smoothing: antialiased;
     text-align: center;
     line-height: 13px;
-    color: #000;
+    color: #fff;
 }
 
 input[type=checkbox]:indeterminate:before {
-    content: "\f068";
+    content: url(../img/check.svg);
 }
 
 input[type=checkbox]:disabled,

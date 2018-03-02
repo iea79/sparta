@@ -7,15 +7,21 @@
 	<meta name="description" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery.matchHeight.js"></script>
-	<script type="text/javascript" src="js/function.js"></script>
+	<link href="css/style.css?0.3" rel="stylesheet" type="text/css" />
+	<link href="css/animate.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
+
+<div class="loader">
+	<div class="loader__circle">
+		<img src="img/sparta_logo_circle.svg">
+	</div>
+	<div class="loader__head">
+		<img src="img/sparta_logo_head.svg">
+	</div>
+</div>
 
 <div class="wrapper">
 
@@ -27,7 +33,7 @@
 			<div class="header__action">
 				<a href="mailto:vaal_natalya@mail.ru">vaal_natalya@mail.ru</a>
 				<a href="tel:+7 (925) 201 46 78">+7 (925) 201 46 78</a>
-				<a href="#" class="btn">Заказать звонок</a>
+				<a href="#" class="btn" data-toggle="modal" data-target="#callback">Заказать звонок</a>
 			</div>
 					
 		</div>
@@ -38,6 +44,7 @@
 	
 		<!-- begin first__screen -->
 		<section id="first__screen" class="first__screen full__height">
+			<div class="first__screen_man"></div>
 			<div class="first__screen_vertical">
 				
 				<div class="container_center">
@@ -49,15 +56,15 @@
 						<div class="first__screen_date-item">Вс</div>
 					</div>
 					
-					<div class="first__screen_pretitle">Закрытый спецкурс</div>
+					<div class="first__screen_pretitle first__screen_anim">Закрытый спецкурс</div>
 
 					<h1 class="first__screen_title">
-						<span class="first__screen_title-lg">Выжить</span>
-						любой ценой
+						<span class="first__screen_title-lg first__screen_anim">Выжить</span>
+						<span class="first__screen_title-next first__screen_anim">любой ценой</span>
 					</h1>
 
 					<div class="first__screen_action">
-						<a href="#" class="btn btn__danger">Записаться на курс</a>
+						<a href="#" class="btn btn__danger" data-toggle="modal" data-target="#callback">Записаться на курс</a>
 						<div class="first__screen_action_sub">Настоящий мужчина выживает <br>всегда и везде</div>
 					</div>
 					
@@ -66,6 +73,525 @@
 			</div>
 		</section>
 		<!-- end first__screen -->
+
+		<!-- begin quest -->
+		<section id="quest" class="quest">
+			<div class="container_center">
+
+				<h2 class="section__title">Что тебя ждёт</h2>
+			
+				<div class="quest__item quest__item_row slide__top" data-grid-match>
+					<div class="quest__img grid__item">
+						<img src="img/quest1.png">
+					</div>
+					<div class="quest__text grid__item">
+						<div class="quest__text_vertical">
+							<div class="quest__title">Спецзнания</div>
+							За 3 дня спецкурса ты получишь знания, которым обучают военных, альпинистов, спасателей.
+						</div>
+					</div>
+				</div>
+				
+				<div class="quest__item quest__item_row quest__item-img--right slide__top" data-grid-match>
+					<div class="quest__img grid__item">
+						<img src="img/quest2.png">
+					</div>
+					<div class="quest__text grid__item">
+						<div class="quest__text_vertical">
+							<div class="quest__title">Спецнавыки</div>
+							3 дня в лесу, без палаток, зажигалок и любых других гаджетов, которые облегчали бы жизнь.
+						</div>
+					</div>
+				</div>
+				
+				<div class="quest__item quest__item_column slide__top">
+					<div class="quest__img grid__item">
+						<img src="img/quest3.png">
+					</div>
+					<div class="quest__text grid__item">
+						<div class="quest__text_vertical">
+							<div class="quest__title">Экстрим</div>
+							Смоделированные экстремальные ситуации, <br>максимально приближенные к реальности. Тебе <br>придётся спасать утопающих из воды, спускаться <br>по верёвке по отвесным скалам, добывать воду, жить<br> в шалашах и землянках.
+						</div>
+					</div>
+				</div>
+				
+				<div class="quest__item quest__item_column slide__top">
+					<div class="quest__img grid__item">
+						<img src="img/quest4.png">
+					</div>
+					<div class="quest__text grid__item">
+						<div class="quest__text_vertical">
+							<div class="quest__title">Жёсткая практика</div>
+							Участникам предстоит, преодолевая <br>себя, действовать в реальной обстановке, <br>применять на практике полученные ранее <br>знания.
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end quest -->
+
+		<!-- begin skill -->
+		<section id="skill" class="skill">
+			<div class="container_center">
+			
+				<h2 class="section__title">Что даёт спецкурс</h2>
+
+				<!-- begin grid skill__grid -->
+				<div class="grid grid__2 skill__grid">
+					<div class="skill__item slide__top">
+						<div class="skill__name">Базовые знания</div>
+						Ты научишься не допускать 
+						и предотвращать попадание человека 
+						в опасные ситуации на природе и в городе.
+					</div>
+					<div class="skill__item slide__top">
+						<div class="skill__name">Важные навыки</div>
+						Получишь не только все базовые знания, 
+						но и навыки, которые могут спасти жизнь и здоровье, как своё, так и родных, близких и людей вокруг.
+					</div>
+				</div>
+				<!-- end grid skill__grid -->
+
+				<!-- begin skill__chart -->
+				<div class="skill__chart slide__top">
+				
+					<div class="skill__chart_left">
+						<div class="skill__precent">80%</div>
+						<div class="skill__precent_sub">практики</div>
+						и никаких алкопоходов
+						и посиделок у костра
+					</div>
+					
+					<div class="skill__chart_right">
+						<div class="skill__precent">20%</div>
+						<div class="skill__precent_sub">теории</div>
+						по существу 
+						и без занудства
+					</div>
+
+					<div class="skill__chart_img">
+						<img src="img/donut.svg">
+					</div>
+					
+				</div>
+				<!-- end skill__chart -->
+				
+			</div>
+		</section>
+		<!-- end skill -->
+
+		<!-- begin what -->
+		<section id="what" class="what">
+			<div class="container_center">
+			
+				<div class="section__title_sub">ты узнаешь </div>
+				<div class="section__title">что делать</div>
+
+				<!-- begin grid what__grid -->
+				<div class="grid grid__2 what__grid slide__top">
+					<div class="what__grid_item">
+						<div class="what__item">
+							<div class="what__count">1</div>
+							<div class="what__text">
+								<div class="what__title">Если заблудился</div>
+								Как быть, если заблудился и остался один в лесу, как не умереть 
+								от голода и холода, сделать себе ночлег, развести огонь 
+								без спичек.
+							</div>
+						</div>
+					</div>
+					<div class="what__grid_item">
+						<div class="what__item">
+							<div class="what__count">2</div>
+							<div class="what__text">
+								<div class="what__title">Если дикие звери</div>
+								Как вести себя в экстремальной ситуации при встрече с лесными животными, даже если «вон та киса» выглядит такой мирной
+							</div>
+						</div>
+					</div>
+					<div class="what__grid_item">
+						<div class="what__item">
+							<div class="what__count">3</div>
+							<div class="what__text">
+								<div class="what__title">Если нужна первая помощь</div>
+								Ты узнаешь, что делать, если человеку стало плохо, как оказать самопомощь, как вынести пострадавшего из зоны поражения
+							</div>
+						</div>
+					</div>
+					<div class="what__grid_item">
+						<div class="what__item">
+							<div class="what__count">4</div>
+							<div class="what__text">
+								<div class="what__title">Если оказался в воде</div>
+								Как спасти утопающего. 
+								Как не замёрзнуть и просушить одежду. Как подать сигнал SOS
+							</div>
+						</div>
+					</div>
+					<div class="what__grid_item">
+						<div class="what__item">
+							<div class="what__count">5</div>
+							<div class="what__text">
+								<div class="what__title">Если грозит опасность</div>
+								Узнаешь рабочие алгоритмы действий в различных экстренных ситуациях
+							</div>
+						</div>
+					</div>
+					<div class="what__grid_item">
+						<div class="what__item">
+							<div class="what__text">
+								<div class="what__title what__title_danger">Также курс включает в себя блок по безопасности в городе</div>
+								<ul>
+									<li>Как действовать во время пожара?</li>
+									<li>Блок по автомобильной безопасности.</li>
+									<li>Народные волнения, давки, терракты </li>
+									<li>Техногенные и природные катастрофы</li>
+									<li>Что должно быть в EDC наборе</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end grid what__grid -->
+				
+			</div>
+		</section>
+		<!-- end what -->
+		
+		<!-- begin form -->
+		<div class="container_center">
+		
+			<div class="form slide__top">
+				<div class="form__title">Пройди спецкурс</div>
+				<div class="form__title_sub">Научись выживанию в любых условиях</div>
+				<!-- begin grid form__grid -->
+				<div class="grid grid__3 form__grid">
+					<div class="form__grid_item">
+						<input type="text" name="" placeholder="Имя">
+					</div>
+					<div class="form__grid_item">
+						<input type="text" name="" placeholder="Телефон">
+					</div>
+					<div class="form__grid_item">
+						<button type="submit" class="btn btn__danger">Записаться на курс</button>
+					</div>
+				</div>
+				<div class="form__check">
+					<input type="checkbox" name="">
+					<label for="">Я согласен на обработку <a href="#">персональных данных</a></label>
+				</div>
+				<!-- end grid form__grid -->
+			</div>
+			
+		</div>
+		<!-- end form -->
+
+		<!-- begin exp -->
+		<section id="exp" class="exp">
+			<div class="container_center">
+			
+				<h2 class="section__title">Ты приобретёшь <br>навык</h2>
+				<div class="form__title_sub">Этот курс войдёт в топ 5 событий по яркости эмоций</div>
+
+				<!-- begin grid exp__grid -->
+				<div class="grid grid__3 exp__grid">
+					<div class="exp__item slide__top">
+						Побываешь в роли <br>
+						<b>пострадавшего и спасателя</b>
+					</div>
+					<div class="exp__item slide__top">
+						Проведёшь ночь <br>
+						<b>в партизанском укрытии</b>
+					</div>
+					<div class="exp__item slide__top">
+						Освоишь больше <br>
+						<b>десятка узлов</b>
+					</div>
+					<div class="exp__item slide__top">
+						Попробуешь себя в роли
+						<b>«Выжившего» с ДиКаприо</b>
+					</div>
+					<div class="exp__item slide__top">
+						Получишь <b>море адреналина</b>,
+						но главное - бесценный опыт, 
+						который останется на всю жизнь
+					</div>
+					<div class="exp__item slide__top">
+						Побываешь в роли 
+						<b>Беара Гриллса</b> с канала
+						Discovery.
+					</div>
+					<div class="exp__item slide__top">
+						Бросишь <b>самому себе вызов</b> 
+						и посмотришь страху в глаза
+					</div>
+					<div class="exp__item slide__top">
+						Прокачаешь свои морально-
+						волевые качества, <b>став сильнее</b>
+					</div>
+					<div class="exp__item slide__top">
+						<b>Доведёшь всё до конца.</b> <br>
+						Не будет невыполненных заданий.
+					</div>
+				</div>
+				<!-- end grid exp__grid -->
+				
+			</div>
+		</section>
+		<!-- end exp -->
+
+		<!-- begin programm -->
+		<section id="programm" class="programm">
+			<div class="container_center">
+
+				<h2 class="section__title">В программе <br>спецкурса</h2>
+			
+				<!-- programm__grid -->
+				<div class="grid grid__3 programm__grid">
+					<div class="programm__item slide__top">
+						<img src="img/programm1.jpg" alt="">
+						<div class="programm__name">Военный альпинизм с минимальным набором снаряжения</div>
+					</div>
+					<div class="programm__item slide__top">
+						<img src="img/programm2.jpg" alt="">
+						<div class="programm__name">Блок по экипировке</div>
+					</div>
+					<div class="programm__item slide__top">
+						<img src="img/programm3.jpg" alt="">
+						<div class="programm__name">Первая помощь</div>
+					</div>
+					<div class="programm__item slide__top">
+						<img src="img/programm4.jpg" alt="">
+						<div class="programm__name">Тактическая медицина </div>
+					</div>
+					<div class="programm__item slide__top">
+						<img src="img/programm5.jpg" alt="">
+						<div class="programm__name">Построение укрытий, долговревременных и краткосрочных</div>
+					</div>
+					<div class="programm__item slide__top">
+						<img src="img/programm6.jpg" alt="">
+						<div class="programm__name">Методы согрева и просушки одежды</div>
+					</div>
+					<div class="programm__item slide__top">
+						<img src="img/programm7.jpg" alt="">
+						<div class="programm__name">Разведение огня без спичек</div>
+					</div>
+					<div class="programm__item slide__top">
+						<img src="img/programm8.jpg" alt="">
+						<div class="programm__name">Безопасность в городе</div>
+					</div>
+					<div class="programm__item slide__top">
+						<img src="img/programm9.jpg" alt="">
+						<div class="programm__name">Поисково-спасательные работы</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end programm -->
+
+		<!-- begin teacher -->
+		<section id="teacher" class="teacher">
+			<div class="container_center">
+			
+				<div class="section__title_sub">инструктор</div>
+				<h2 class="section__title">Роман попков</h2>
+
+				<div class="teacher__wrap">
+					<div class="teacher__photo slide__top">
+						<img src="img/roman.png">
+					</div>
+					<div class="teacher__text">
+						<div class="teacher__qoute">Самый лучший учитель — негативный опыт. Оказавшись в экстремальной ситуации ты не поднимешься до уровня своих ожиданий, а откатишься до уровня своих навыков.</div>
+						<ul class="list-line">
+							<li>Аттестованный спасатель МЧС.</li>
+							<li>Инструктор по первой помощи по программе Красного Креста.</li>
+							<li>Обучение и  подготовка в Центре медицины катастроф.</li>
+							<li>Альпинист.</li>
+							<li>8 восхождений на Эльбрус (Западная и Восточная вершины), восхождение на Монблан. Неоднократно принимал участие в спасательных работах в горах. Спас двоих человек на вершине Эльбруса в снежную бурю.</li>
+							<li>Организатор восхождений на Пик Ленина, Белуху, Казбек и трека в базовый лагерь Эвереста</li>
+							<li>Обучался у военных, горных и инструкторов по туризму.</li>
+							<li>Дайвер.</li>
+							<li>Экстремал, несколько десятков прыжков с верёвкой, участник бойцовского клуба.</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<!-- end teacher -->
+		
+		<!-- begin form__2 -->
+		<div class="container_center">
+		
+			<div class="form form__2 slide__top">
+				<div class="form__title">Пройди спецкурс</div>
+				<div class="form__title_sub">Научись выживанию в любых условиях</div>
+				<div class="grid grid__3 form__grid">
+					<div class="form__grid_item">
+						<input type="text" name="" placeholder="Имя">
+					</div>
+					<div class="form__grid_item">
+						<input type="text" name="" placeholder="Телефон">
+					</div>
+					<div class="form__grid_item">
+						<button type="submit" class="btn btn__danger">Записаться на курс</button>
+					</div>
+				</div>
+				<div class="form__check">
+					<input type="checkbox" name="">
+					<label for="">Я согласен на обработку <a href="#">персональных данных</a></label>
+				</div>
+			</div>
+			
+		</div>
+		<!-- end form__2 -->
+
+		<!-- begin price -->
+		<section id="price" class="price">
+			<div class="container_center">
+			
+				<h2 class="section__title">Выжить любой ценой</h2>
+				<!-- begin grid price__grid -->
+				<div class="grid grid__3 price__grid">
+					<div class="price__item slide__top">
+						<div class="price__name">3 дня</div>
+						продолжительность
+						курса
+					</div>
+					<div class="price__item slide__top">
+						<div class="price__name">9 900 руб.</div>
+						рекомендуемая
+						стоимость
+					</div>
+					<div class="price__item slide__top">
+						<div class="price__name">Безлимит</div>
+						количесто участников
+						курса
+					</div>
+				</div>
+				<!-- end grid price__grid -->
+				
+			</div>
+		</section>
+		<!-- end price -->
+
+		<!-- begin review -->
+		<section id="review" class="review">
+			<div class="container_center">
+			
+				<h2 class="section__title">Отзывы <br>прошедших курс</h2>
+
+				<div class="review__video">
+					<iframe class="video" id="video" src="https://www.youtube.com/embed/pTWwW7u6p4w?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<div class="review__play">
+						<img id="play" src="img/play.svg">
+						<div class="review__play_text">Посмотри <br>видео</div>
+					</div>
+				</div>
+				
+				<!-- begin review__slider -->
+					<div class="review__slider slide__top">
+						<!-- Slide -->
+						<div class="review__slider_item">
+							<div class="review__slider_photo">
+								<img src="img/rev.png">
+							</div>
+							<div class="review__slider_right">
+								<div class="review__slider_name">Дмитрий Весна</div>
+
+								<div class="review__slider_text">Я, Выжил!!!! Такого треша в жизни у меня не было. Не думал даже, что на такое способен в последнее время. Ни какое КМБ и прочее с этим не сравнится. Каждый день плавать в одежде в речках (а это Мурманск детка), спать по 2 часа или совсем не спать, потому что надо совершать марш броски с пострадавшим в 140 кг., освоить альпинизм и совершать самостоятельные спуски и подъемы с крутых скал за 1 день, делать носилки за 5 минут из подручных средств, есть ягоды по пол дня, потому что другой еды нет, пить только из речки, ходить босиком по лесу весь день, делать укрытия</div>
+
+								<a href="#" class="review__slider_more">Читать весь отзыв (на vk.com)</a>
+							</div>
+						</div>
+						<!-- Slide -->
+						<div class="review__slider_item">
+							<div class="review__slider_photo">
+								<img src="img/rev.png">
+							</div>
+							<div class="review__slider_right">
+								<div class="review__slider_name">Дмитрий Весна</div>
+
+								<div class="review__slider_text">Я, Выжил!!!! Такого треша в жизни у меня не было. Не думал даже, что на такое способен в последнее время. Ни какое КМБ и прочее с этим не сравнится. Каждый день плавать в одежде в речках (а это Мурманск детка), спать по 2 часа или совсем не спать, потому что надо совершать марш броски с пострадавшим в 140 кг., освоить альпинизм и совершать самостоятельные спуски и подъемы с крутых скал за 1 день, делать носилки за 5 минут из подручных средств, есть ягоды по пол дня, потому что другой еды нет, пить только из речки, ходить босиком по лесу весь день, делать укрытия</div>
+
+								<a href="#" class="review__slider_more">Читать весь отзыв (на vk.com)</a>
+							</div>
+						</div>
+					</div>
+				<!-- end review__slider -->
+				
+			</div>
+		</section>
+		<!-- end review -->
+
+		<!-- begin gallery -->
+		<div class="gallery slide__top">
+			<div class="gallery__wrap">
+				<div class="gallery__item">
+					<div class="gallery__item_lg">
+						<a data-fancybox="gallery" href="img/g1.JPG"><img src="img/g1-sm.jpg"></a>
+					</div>
+					<div class="gallery__item_col">
+						<a data-fancybox="gallery" href="img/g2.JPG"><img src="img/g2-sm.jpg"></a>
+						<a data-fancybox="gallery" href="img/g3.JPG"><img src="img/g3-sm.jpg"></a>
+					</div>
+				</div>
+				<div class="gallery__item">
+					<div class="gallery__item_lg">
+						<a data-fancybox="gallery" href="img/g4.JPG"><img src="img/g4-sm.jpg"></a>
+					</div>
+					<div class="gallery__item_col">
+						<a data-fancybox="gallery" href="img/g5.jpg"><img src="img/g5-sm.jpg"></a>
+						<a data-fancybox="gallery" href="img/g6.jpg"><img src="img/g6-sm.jpg"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end gallery -->
+
+		<!-- begin map -->
+		<section class="map">
+			<div id="map" class="map__wrap"></div>
+			<div class="container_center">
+			
+				<h2 class="section__title">География <br>проведения</h2>
+				
+			</div>
+		</section>
+		<!-- end map -->
+
+		<!-- begin prefooter -->
+		<section id="prefooter" class="prefooter">
+
+			<div class="container_center">
+			
+				<div class="form prefooter__form slide__top">
+					<div class="form__title">Есть вопросы?</div>
+					<div class="form__title_sub">Оставь контакты, я перезвоню</div>
+					<div class="grid grid__3 form__grid">
+						<div class="form__grid_item">
+							<input type="text" name="" placeholder="Имя">
+						</div>
+						<div class="form__grid_item">
+							<input type="text" name="" placeholder="Телефон">
+						</div>
+						<div class="form__grid_item">
+							<button type="submit" class="btn btn__danger">Отправить</button>
+						</div>
+					</div>
+					<div class="form__check">
+						<input type="checkbox" name="">
+						<label for="">Я согласен на обработку <a href="#">персональных данных</a></label>
+					</div>
+				</div>
+				
+			</div>
+			
+		</section>
+		<!-- end prefooter -->
 
 	</main>
 	<!-- end main__content -->
@@ -80,13 +606,60 @@
 
 		<a href="#" class="footer__logo"><img src="img/logo-foot.png"></a>
 	
-		<div class="copy"><a href="#">Site.com</a></div>
+		<span  class="footer__copy" href="#">© 2018</span>
+
+		<div class="footer__developer">
+			<p>Дизайн: <a href="http://strogiy.ru">strogiy.ru</a></p>
+			<p>Разработка: <a href="http://frontendie.ru">frontendie.ru</a></p>
+		</div>
+
+		<div class="footer__center">
+			<a href="#">Политика конфиденциальности</a>
+		</div>
 
 	</div>
 
 </footer>
 <!-- end footer -->
 
+<!-- begin Modal callback -->
+<div class="modal fade callback" id="callback">
+	<div class="modal-dialog">
+		<div class="modal-content form">
+			<a href="#" class="modal-close" data-dismiss="modal"></a>
+			<div class="form__title">Есть вопросы?</div>
+			<div class="form__title_sub">Оставь контакты, я перезвоню</div>
+			<div class="grid grid__3 form__grid">
+				<div class="form__grid_item">
+					<input type="text" name="" placeholder="Имя">
+				</div>
+				<div class="form__grid_item">
+					<input type="text" name="" placeholder="Телефон">
+				</div>
+				<div class="form__grid_item">
+					<button type="submit" class="btn btn__danger">Отправить</button>
+				</div>
+			</div>
+			<div class="form__check">
+				<input type="checkbox" name="">
+				<label for="">Я согласен на обработку <a href="#">персональных данных</a></label>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Modal callback -->
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.matchHeight.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/modal.js"></script>
+	<script type="text/javascript" src="js/jquery.viewportchecker.min.js"></script>
+	<script type="text/javascript" src="js/function.js?0.3"></script>
+
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+	<script src="js/jquery.fancybox.min.js"></script>	
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApMGitD0JBNexZOL6VioySmY2NRy-HKLQ&callback=initMap"></script>
 
 </body>
 </html>

@@ -2726,6 +2726,33 @@
   animation-name: zoomIn;
 }
 
+@-webkit-keyframes zoomInInvers {
+  from {
+    opacity: 0;
+    transform: scale3d(5, 5, 5);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomInInvers {
+  from {
+    opacity: 0;
+    transform: scale3d(5, 5, 5);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomInInvers {
+  -webkit-animation-name: zoomInInvers;
+  animation-name: zoomInInvers;
+}
+
 @-webkit-keyframes zoomInDown {
   from {
     opacity: 0;

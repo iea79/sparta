@@ -11,13 +11,21 @@
     z-index: 1050;
     -webkit-overflow-scrolling: touch;
     outline: 0;
+    text-align: center;
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 100vh;
+        vertical-align: middle;
+    }
     &-open {
         overflow: hidden;
     }
     &-close {
         position: absolute;
-        width: 21px;
-        height: 21px;
+        width: 22px;
+        height: 22px;
         right: 23px;
         top: 23px;
         // background: image-url('close.svg') no-repeat center center;
@@ -25,9 +33,10 @@
             content: '';
             position: absolute;
             display: block;
-            width: 20px;
-            border-top: 1px solid $main_color;
+            width: 28px;
+            border-top: 1px solid #f5f8fc;
             top: 10px;
+            left: -3px;
         }
         &:before {
             transform: rotate(45deg);
@@ -49,9 +58,12 @@
     }
     &-dialog {
         position: relative;
-        width: auto;
+        text-align: left;
+        display: inline-block;
         margin: 10px auto;
-        max-width: 690px;
+        max-width: 1140px;
+        width: 90%;
+        vertical-align: middle;
     }
 
     &-content {
@@ -80,7 +92,7 @@
         }
 
         &.in {
-            opacity: .5;
+            opacity: .8;
             filter: alpha(opacity=50);
         }
     }

@@ -63,6 +63,19 @@
 	&:-ms-input-placeholder      {@content}; 
 }
 
+// 
+// @TODO: Add docs to animated!
+//
+@mixin animated($speed, $name) {
+	opacity: 0;
+	&.animated {
+		animation-duration: $speed;
+		animation-name: $name;
+		animation-fill-mode: both;
+		opacity: 1;
+	}
+}
+
 // %form_field {
 // 	background-color: transparent;
 // 	border: 1px solid transparentize($input_border_color, .8);
