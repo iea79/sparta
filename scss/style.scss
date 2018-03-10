@@ -652,6 +652,33 @@ section {
 	}
 }
 
+.description {
+	padding-top: 119px;
+	@extend %clear_a;
+	&__img {
+		float: right;
+		margin-left: 60px;
+	}
+	&__text {
+		overflow: hidden;
+		padding-top: 13px;
+		line-height: 1.6;
+	}
+	@media (max-width: 767px) {
+		padding-top: 50px;
+	    &__img {
+	    	float: none;
+	    	width: 100%;
+	    	text-align: center;
+	    	margin-left: 0;
+	    }
+	    &__text {
+	    	overflow: inherit;
+	    	width: 100%;
+	    }
+	}
+}
+
 .quest {
 	padding-bottom: 28px;
 	&__item {

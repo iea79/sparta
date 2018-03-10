@@ -6,7 +6,7 @@
 //  ==========================
  */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900&subset=cyrillic");
-.grid:after, .footer:after, .header:after, .main__content:after, .quest__item:after, .what__item:after, .teacher__wrap:after, .review__slider_item:after, .gallery__wrap:after, .gallery__item:after {
+.grid:after, .footer:after, .header:after, .main__content:after, .description:after, .quest__item:after, .what__item:after, .teacher__wrap:after, .review__slider_item:after, .gallery__wrap:after, .gallery__item:after {
   content: '';
   display: table;
   clear: both; }
@@ -1402,6 +1402,27 @@ section {
       padding-top: 48px; }
     .first__screen_title {
       margin-bottom: 30px; } }
+
+.description {
+  padding-top: 119px; }
+  .description__img {
+    float: right;
+    margin-left: 60px; }
+  .description__text {
+    overflow: hidden;
+    padding-top: 13px;
+    line-height: 1.6; }
+  @media (max-width: 767px) {
+    .description {
+      padding-top: 50px; }
+      .description__img {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin-left: 0; }
+      .description__text {
+        overflow: inherit;
+        width: 100%; } }
 
 .quest {
   padding-bottom: 28px; }
