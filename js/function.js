@@ -50,15 +50,6 @@ $(document).ready(function() {
 		event.preventDefault();
 	});
 
-	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	// $('#main__menu a[href^="#"]').click( function(){ 
-	// 	var scroll_el = $(this).attr('href'); 
-	// 	if ($(scroll_el).length != 0) {
-	// 	$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-	// 	}
-	// 	return false;
-	// });
-
 	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
     $(document).ready(function(){
         var HeaderTop = $('.header').offset().top;
@@ -71,7 +62,7 @@ $(document).ready(function() {
                 }
         });
     });
-   	// setGridMatch($('[data-grid-match] .grid__item'));
+
    	gridMatch();
 
    	if (!isXsWidth()) {
@@ -100,15 +91,7 @@ $(document).ready(function() {
 		        }
 		    })(0);
 	   	}, 1500);
-	   	// setTimeout(function() {
-		   //  // var elemAnim = $(".first__screen_anim");
-		   //  (function add(i) {
-		   //      elemAnim.eq(i).addClass("normal");
-		   //      if (i < elemAnim.length - 1) {
-		   //          setTimeout(function() { add(i + 1); }, 1000);
-		   //      }
-		   //  })(0);
-	   	// }, 3500);
+
 	   	setTimeout(function() {
 	   		$('.first__screen_action').addClass('animated');
 		   	$('.first__screen_man').addClass('show');
@@ -165,20 +148,6 @@ function Play() {
 	var audo = new Audio('audio/Sound_21018.mp3');
 	audo.play();
 }	
-
-// function setGridMatch(columns) {
-// 	var tallestcolumn = 0;
-// 	columns.removeAttr('style');
-// 	columns.each( function() {
-// 		currentHeight = $(this).height();
-// 		if(currentHeight > tallestcolumn) {
-// 			tallestcolumn = currentHeight;
-// 		}
-// 	});
-// 	setTimeout(function() {
-// 		columns.css('minHeight', tallestcolumn);
-// 	}, 100);
-// }
 
 // Map
 

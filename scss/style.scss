@@ -239,7 +239,6 @@ a {
 	    		display: none;
 	    	}
 		    .btn {
-		    	// display: inline-block;
 		    	margin-top: 20px;
 		    	margin-left: 0;
 		    	margin-right: 0;
@@ -247,30 +246,6 @@ a {
 	    }
 	}
 	@media (max-width: 480px) {
-    	// text-align: center;
-	    // &__logo {
-	    // 	width: auto;
-	    // 	display: block;
-	    // 	float: none;
-	    // 	margin-bottom: 5px;
-	    // 	img {
-	    // 		width: 124px;
-	    // 	}
-	    // }
-	    // &__action {
-	    // 	padding-top: 5px;
-	    // 	font-size: 14px;
-	    // 	text-align: center;
-	    // 	a {
-	    // 		margin-left: 20px;
-	    // 		display: inline-block;
-	    // 	}
-	    // }
-	    // .btn {
-	    // 	display: block;
-	    // 	max-width: 300px;
-	    // 	margin: 10px auto;
-	    // }
 	}
 }
 
@@ -436,7 +411,6 @@ section {
 		width: 0%;
 		z-index: 1;
 		transition: all .5s;
-		// background-attachment: fixed;
 		&.show {
 			width: 50.7%;
 		}
@@ -470,10 +444,8 @@ section {
 	&_pretitle {
 		letter-spacing: 14.4px;
 		transition: all .5s;
-		// @include animated(1s, zoomInInvers);
 		&.animated {
 		}
-		// margin-bottom: 40px;
 	}
 	&_title {
 		// overflow: hidden;
@@ -492,12 +464,10 @@ section {
 			color: #ff0000;
 			letter-spacing: 9px;
 			transition: all .5s;
-			// @include animated(1s, zoomInInvers);
 		}
 		&-next {
 			display: block;
 			transition: all .5s;
-			// @include animated(1s, fadeInLeft);
 		}
 	}
 	&_action {
@@ -725,7 +695,6 @@ section {
 		font-weight: 700;
 		margin-bottom: 8px;
 		font-size: 30px;
-		// line-height: 1.4;
 	}
 	&__item-img--right {}
 	@media (max-width: 1199px) {
@@ -944,7 +913,6 @@ section {
 				text-align: center;
 				margin-bottom: 30px;
 				&:before {
-					// display: none;
 					top: auto;
 					width: 0;
 					height: 52px;
@@ -1002,7 +970,6 @@ section {
 			margin-bottom: 0;
 		}
 		&_item {
-			// padding: 60px;
 			&:nth-child(odd) {
 				padding-left: 0;
 			}
@@ -1019,7 +986,6 @@ section {
 		}
 	}
 	&__item {
-		// padding: 60px;
 		@extend %clear_a;
 	}
 	&__count {
@@ -1207,7 +1173,6 @@ section {
 		margin-bottom: 31px;
 	}
 	.form__title {
-		// max-width: 770px;
 		&_sub {
 
 		}
@@ -1569,8 +1534,6 @@ section {
 	&__item {
 		width: 50%;
 		display: inline-block;
-
-		// overflow: hidden;
 		@extend %clear_a;
 		img {
 			display: block;
@@ -1620,7 +1583,6 @@ section {
 .map {
 	position: relative;
 	padding-top: 100px;
-	// padding: 0;
 	height: 850px;
 	&__wrap {
 		position: absolute !important;
@@ -1644,7 +1606,6 @@ section {
 	background: url('../img/prefooter-bg.jpg') no-repeat top center;
 	background-size: cover;
 	padding-bottom: 183px;
-	// background-attachment: fixed;
 	&__form {
 		background-image: none;
 		padding: 0;
@@ -1723,27 +1684,6 @@ section {
 
 .visible {
 	opacity: 1;
-}
-
-/* Responsive styles
------------------------------------------------------------------------------ */
-// max-width: 1200px ===========================================================
-@media (max-width: $breakpoint-xlarge) {
-}
-
-// max-width: 960px ===========================================================
-@media (max-width: $breakpoint-large) {
-	
-}
-
-// max-width: 760px ===========================================================
-@media (max-width: $breakpoint-medium) {
-	
-}
-
-// max-width: 480px ===========================================================
-@media (max-width: $breakpoint-small) {
-	
 }
 
 audio {
